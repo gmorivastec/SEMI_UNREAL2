@@ -3,11 +3,16 @@
 
 #include "Personaje.h"
 
+// este archivo es de implementación
+// es el "CÓMO"
+
 // Sets default values
 APersonaje::APersonaje()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	Entero = 5;
+	UE_LOG(LogTemp, Error, TEXT("ENTERO: %i"), Entero);
 
 }
 
@@ -23,11 +28,37 @@ void APersonaje::BeginPlay()
     UE_LOG(LogTemp, Display, TEXT("Log de display"));
 	UE_LOG(LogTemp, Warning, TEXT("Log de warning"));
 	UE_LOG(LogTemp, Error, TEXT("Log de error"));
-    
-    // ESTO HACE QUE EL EDITOR TRUENE
+
+	// ESTO HACE QUE EL EDITOR TRUENE
     // UE_LOG(LogTemp, Fatal, TEXT("Log fatal"));
 
+	Entero = 10;
+	UE_LOG(LogTemp, Error, TEXT("ENTERO: %i"), Entero);
 	
+	// ejemplo: imprimiendo un fstring 
+    FString ejemplito = GetName();
+
+	// por qué tiene un asterisco eso?!                            v vvv v v
+	UE_LOG(LogTemp, Display, TEXT("el nombre de este cuate: %s"), *ejemplito);
+    
+	// variables con asterisco son apuntadores (pointer)
+	// apuntador es un tipo de variable que NO contiene el dato, APUNTA a un espacio
+	// en memoria que lo contiene
+	// se crea al utilizar la keyword "new"
+	// es INDISPENSABLE destruirlos cuando los creamos
+
+	// en C++ nosotros limpiamos la memoria
+	// si no destruimos un objeto nunca se crea un "memory leak"
+
+	// Mensaje en pantalla
+	// operador -> 
+	// SE USA CUANDO ESTAMOS ACCEDIENDO A UN MIEMBRO DE UN APUNTADOR
+
+	// Clase::Miembro - acceso a un miembro estático
+	// miembro - enumeración, atributo, método, etc que pertenece a una clase
+	(*GEngine).AddOnScreenDebugMessage(-1, 5.12f, FColor::White, TEXT("HOLA AMIGOTES"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, TEXT("HOLA AMIGOTOTES (2)"));
+
 }
 
 // Called every frame
@@ -38,7 +69,7 @@ void APersonaje::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-    UE_LOG(LogTemp, Log, TEXT("delta: %i"), DeltaTime);
+    //UE_LOG(LogTemp, Log, TEXT("delta: %i"), DeltaTime);
 }
 
 void APersonaje::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) {

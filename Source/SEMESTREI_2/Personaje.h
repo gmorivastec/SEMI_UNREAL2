@@ -34,4 +34,21 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	int32 Entero = 0;
+
+	// propiedades modificables desde editor
+	UPROPERTY(EditAnywhere)
+	int32 OtroEntero = 5;
+
+	UPROPERTY(EditAnywhere)
+	FVector Vectorcito = FVector(1, 2, 3);
+
+	UPROPERTY(EditAnywhere)
+	bool Booleano = false;
+
+	UPROPERTY(EditAnywhere, Category="Una Categoría Chida")
+	float Flotante = 5;
+
+	UPROPERTY(VisibleAnywhere)
+	float Visible = 10;
 };

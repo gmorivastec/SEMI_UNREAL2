@@ -1,5 +1,5 @@
 /FI "C:\Program Files\Epic Games\UE_5.0\Engine\Intermediate\Build\Win64\UnrealEditor\Development\AutomationTest\Definitions.AutomationTest.h" 
-/FI "C:\Users\Guillermo\Documents\Unreal Projects\SEMESTREI_2\Intermediate\Build\Win64\SEMESTREI_2Editor\Development\CoreUObject\SharedPCH.CoreUObject.ShadowErrors.h" 
+/FI "C:\Users\gmori\work\SEMI\SEMI_UNREAL2\Intermediate\Build\Win64\SEMESTREI_2Editor\Development\CoreUObject\SharedPCH.CoreUObject.ShadowErrors.h" 
 /I "C:\Program Files\Epic Games\UE_5.0\Engine\Source" 
 /I "C:\Program Files\Epic Games\UE_5.0\Engine\Source\Runtime\AutomationTest\Private" 
 /I "C:\Program Files\Epic Games\UE_5.0\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Core" 
