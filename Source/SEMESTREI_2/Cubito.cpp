@@ -7,7 +7,7 @@
 ACubito::ACubito()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 }
 
@@ -21,7 +21,7 @@ void ACubito::BeginPlay()
 
 	UE_LOG(LogTemp, Display, TEXT("el nombre del static mesh: %s"), *StaticMesh->GetName());
 
-	StaticMesh->AddImpulse(FVector(0, 1000, 0));
+	StaticMesh->AddImpulse(Vectorcito);
 }
 
 // Called every frame

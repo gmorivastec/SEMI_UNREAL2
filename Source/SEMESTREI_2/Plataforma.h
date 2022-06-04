@@ -4,31 +4,32 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Cubito.generated.h"
-
-// NOTA PARA EL FUTURO:
-// si hacen un blueprint class basado en una C++ class
-// puede tener lógica desde el código y desde el blueprint
+#include "Plataforma.generated.h"
 
 UCLASS()
-class SEMESTREI_2_API ACubito : public AActor
+class SEMESTREI_2_API APlataforma : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	ACubito();
+	APlataforma();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	UStaticMeshComponent* StaticMesh;
+	int direccion = 1;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(EditAnywhere)
-	FVector Vectorcito = FVector(0, 1000, 0);
+	UPROPERTY(EditAnywhere, Category="Límites de plataforma")
+	float limiteIzq = 0;
+
+	UPROPERTY(EditAnywhere, Category="Límites de plataforma")
+	float limiteDer = 0;
+
+	UPROPERTY(EditAnywhere, Category="Límites de plataforma")
+	float velocidad = 10;
 };
