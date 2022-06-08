@@ -31,11 +31,13 @@ void USpawner::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+/*
 	// ...
 	if(player->IsInputKeyDown(EKeys::SpaceBar)){
 
 		// como instanciar un actor
 		GetWorld()->SpawnActor<AActor>(Proyectil, GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation());
 	}
+	*/
 }
 

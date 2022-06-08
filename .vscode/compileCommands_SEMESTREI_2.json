@@ -20,6 +20,16 @@
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
+		"file": "C:\\Users\\gmori\\work\\SEMI\\SEMI_UNREAL2\\Source\\SEMESTREI_2\\PersonajeMovil.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\gmori\\work\\SEMI\\SEMI_UNREAL2\\.vscode\\compileCommands_SEMESTREI_2\\SEMESTREI_2.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\gmori\\work\\SEMI\\SEMI_UNREAL2\\Source\\SEMESTREI_2\\PersonajeMovil.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\gmori\\work\\SEMI\\SEMI_UNREAL2\\.vscode\\compileCommands_SEMESTREI_2\\SEMESTREI_2.211.rsp",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Users\\gmori\\work\\SEMI\\SEMI_UNREAL2\\Source\\SEMESTREI_2\\Plataforma.cpp",
 		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @C:\\Users\\gmori\\work\\SEMI\\SEMI_UNREAL2\\.vscode\\compileCommands_SEMESTREI_2\\SEMESTREI_2.211.rsp",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
