@@ -52,11 +52,6 @@ void APersonajeMovil::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if(bDisparando){
-
-		GetWorld()->SpawnActor<AActor>(Proyectil, GetActorLocation(), GetActorRotation());
-		bDisparando = false;
-	}
 
 	// moverse sólo si la velocidad no es cero
 	if(!VelocidadActual.IsZero()){
@@ -93,10 +88,15 @@ void APersonajeMovil::MoverY(float Axis){
 
 void APersonajeMovil::EmpezarDisparo(){
 	UE_LOG(LogTemp, Display, TEXT("Empieza Disparo"));
-	bDisparando = true;
+	GetWorldTimerManager().SetTimer(handle, this, &APersonajeMovil::DisparoRecurrente, 0.5f, true, 0);
 }
 
 void APersonajeMovil::TerminarDisparo(){
 	UE_LOG(LogTemp, Display, TEXT("Termina Disparo"));
-	bDisparando = false;
+	GetWorldTimerManager().ClearTimer(handle);
+}
+
+void APersonajeMovil::DisparoRecurrente(){
+
+	GetWorld()->SpawnActor<AActor>(Proyectil, GetActorLocation(), GetActorRotation());
 }

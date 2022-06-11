@@ -20,6 +20,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	FTimerHandle handle;
 
 public:	
 	// Called every frame
@@ -36,11 +37,14 @@ public:
 
 	// variables de entrada
 	FVector VelocidadActual;
-	bool bDisparando;
+	
 
 	UPROPERTY(EditAnywhere)
 	USceneComponent* ComponenteVisible;
 
 	UPROPERTY(EditAnywhere, Category="Spawner")
 	TSubclassOf<AActor> Proyectil;
+
+	UFUNCTION()
+	void DisparoRecurrente();
 };

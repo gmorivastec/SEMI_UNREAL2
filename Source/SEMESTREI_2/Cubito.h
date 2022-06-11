@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Components/BoxComponent.h"
 #include "Cubito.generated.h"
 
 // NOTA PARA EL FUTURO:
@@ -31,4 +32,9 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	FVector Vectorcito = FVector(1000, 0, 0);
+
+	UFUNCTION()
+	void OverlapBegin(UPrimitiveComponent* Comp, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+	void OverlapEnd(UPrimitiveComponent* Comp, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);
 };
